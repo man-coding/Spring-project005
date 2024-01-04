@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>제목: [[${title}]]</h1>
+    <h1>저자: [[${writer}]]</h1>
+    <h1>출간일: [[${release}]]</h1>
+    
+    <p>제목: <span th:text="${title}"></span></p>
+    <p>저자: <span th:text="${writer}"></span></p>
+    <p>출간일: <span th:text="${release}"></span></p>
+</body>
+</html>
