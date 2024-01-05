@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td, th{
+            border: 1px solid black;
+            text-align: center;
+            width: 95px;
+            height: 30px;
+        }
+        
+    </style>
+</head>
+<body> 
+    
+    <table>
+    	<th>이름</th>
+    	<th>나이</th>
+    	<th>주소</th>
+    	
+    	<th:block th:each="dto : ${list}">
+    	<tr>
+    	<td th:text="${dto.name}"></td>
+    	<td th:text="${dto.age}"></td>
+    	<td th:text="${dto.address}"></td>
+    	</tr>
+    	</th:block>
+    	<!--  <tr>
+    	<td th:text="${dto2.name}"></td>
+    	<td th:text="${dto2.age}"></td>
+    	<td th:text="${dto2.address}"></td>
+    	</tr>
+    	<tr>
+    	<td th:text="${dto3.name}"></td>
+    	<td th:text="${dto3.age}"></td>
+    	<td th:text="${dto3.address}"></td>
+    	</tr> -->
+    
+    
+    
+    
+    </table>
+</body>
+</html>

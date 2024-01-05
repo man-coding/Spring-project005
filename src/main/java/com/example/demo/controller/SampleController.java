@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,7 +42,7 @@ public class SampleController {
 		model.addAttribute("dto", sampleDTO);
 	}
 
-	@GetMapping({"/ex5","/ex6","/ex7"})
+	@GetMapping({ "/ex5", "/ex6", "/ex7", "/ex8" })
 	public void ex5(Model model) {
 		List<SampleDTO> list = new ArrayList<>();
 		list.add(new SampleDTO(1, "aaa", LocalDate.now()));
@@ -50,5 +51,20 @@ public class SampleController {
 
 		model.addAttribute("list", list);
 
+	}
+
+	@GetMapping({ "/ex9" })
+	public void ex9(Model model) {
+
+		SampleDTO sampleDTO = new SampleDTO(1, "aaa", LocalDate.now());
+		model.addAttribute("result", "success");
+		model.addAttribute("dto", sampleDTO);
+
+	}
+	
+	@GetMapping({"/ex10"})
+	public void ex10(Model model) {
+		
+		model.addAttribute("date", LocalDateTime.now());
 	}
 }
