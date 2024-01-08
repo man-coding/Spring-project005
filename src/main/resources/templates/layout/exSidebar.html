@@ -4,8 +4,9 @@
 <html>
 
 <!-- 문서에 안에 있는 조각을 exLayout2 페이지에 전달한다 -->
-<th:block th:replace="~{/layout/basic :: setContent(~{this::content})}"> 
-<!-- 2. 특정레이아웃을 선택하고 안에 있는 조각 전달 --!>
+
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content})}">  
+<!-- 2. 특정레이아웃을 선택하고 안에 있는 조각 전달 -->
 
     <th:block th:fragment="content"> <!--  1. 조각만들기 -->
 
